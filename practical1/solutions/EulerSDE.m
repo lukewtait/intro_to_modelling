@@ -1,4 +1,4 @@
-function x = EulerSDE(t,x0,f,P,stdnoise)
+function x = EulerSDE(t,x0,f,stdnoise)
 
     % get dimensionality and number of time points
     N = length(x0); % dimensionality
@@ -14,7 +14,7 @@ function x = EulerSDE(t,x0,f,P,stdnoise)
     for i = 1:(T-1)
         
         h = t(i+1)-t(i) ; % time step
-        x(:,i+1)=x(:,i)+h*f(x(:,i),P)+sqrt(h)*stdnoise.*randn(N,1) ; % calculate next step
+        x(:,i+1)=x(:,i)+h*f(x(:,i))+sqrt(h)*stdnoise.*randn(N,1) ; % calculate next step
         
     end
 end

@@ -10,7 +10,7 @@ P = 0.5 ;
 % simulate
 disp('Simulating...')
 tic
-x = EulerODE(t,x0,@FiringRateModel,P) ; 
+x = EulerODE(t,x0,@(x) FiringRateModel(x,P)) ; 
 toc
 
 % calculate exact solution

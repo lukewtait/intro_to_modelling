@@ -1,4 +1,4 @@
-function x = EulerODE(t,x0,f,P)
+function x = EulerODE(t,x0,f)
 
     % get dimensionality and number of time points
     N = length(x0); % dimensionality
@@ -14,7 +14,7 @@ function x = EulerODE(t,x0,f,P)
     for i = 1:(T-1)
         
         h = t(i+1)-t(i) ; % time step
-        x(:,i+1)=x(:,i)+h*f(x(:,i),P) ; % calculate next step
+        x(:,i+1)=x(:,i)+h*f(x(:,i)) ; % calculate next step
         
     end
 end

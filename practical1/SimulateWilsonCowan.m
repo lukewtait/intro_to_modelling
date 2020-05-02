@@ -10,11 +10,11 @@ P = 0 ;
 % simulate
 disp('Simulating...')
 tic
-x = EulerODE(t,x0,@WilsonCowan,P) ;
+x = EulerODE(t,x0,@(x) WilsonCowan(x,P)) ;
 % --- Leave this lines commented out until task 8 --- 
 % stdEnoise = 0*0.01 ; % standard deviation of noise to excitatory population
 % stdInoise = 0 ; % standard deviation of noise to inhibitory population
-% x = EulerSDE(t,x0,@WilsonCowan,P,[stdEnoise/3.2 ; stdInoise/3.2]) ; % we divide by 3.2 as these are the time constants
+% x = EulerSDE(t,x0,@(x) WilsonCowan(x,P),[stdEnoise/3.2 ; stdInoise/3.2]) ; % we divide by 3.2 as these are the time constants
 % ---------------------------------------------------
 x = x(:,t>=0) ; t = t(t>=0) ; % get rid of the first 1 second as it will contain transients
 toc
