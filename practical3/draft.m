@@ -1,5 +1,5 @@
 
-% step 1
+% step 1 - implement and plot FitzHugh-Nagumo system
 time = 0:0.1:200;
 x_0 = [0 0];
 x_sim = EulerODE(time, x_0, @(x) getFitzHughNagumo(x, 0.7));
@@ -12,10 +12,10 @@ plot(time, x_sim(2,:))
 ylabel('w')
 xlabel('time')
 
-% step 2
+% step 2 - interpretation of the phase plane plot
 plotPhasePlane('getFitzHughNagumo')
 
-% step 3
+% step 3 - finding bifurcation points
 Ivec = -1:0.1:2;
 e1vec = zeros(length(Ivec),1);
 e2vec = zeros(length(Ivec),1);
@@ -36,7 +36,7 @@ line(Ivec,[0,0])
 hold off
 
 
-% step 4
+% step 4 - observing system behaviour near bifurcation point
 time = 0:0.1:200;
 x_0 = [0 0];
 x_sim1 = EulerODE(time, x_0, @(x) getFitzHughNagumo(x, 0.5));
