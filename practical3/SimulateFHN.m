@@ -51,8 +51,8 @@ hold off
 
 % ---------- SECTION 3 -----------
 
-I_0_below = 0.5;
-I_0_above = 0.9;
+I_0_below = ...;
+I_0_above = ...;
 
 funcFHN_bel = @(x) getFitzHughNagumo(x, I_0_below);
 funcFHN_abv = @(x) getFitzHughNagumo(x, I_0_above);
