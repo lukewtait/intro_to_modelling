@@ -5,6 +5,5 @@ This is the Github repository for the workshop *"An Introduction to Modelling Br
 1. An introduction to modelling the brain, Luke Tait
 1. Dynamics on networks: Application to epilepsy, Marinho Lopes
 1. Bifurcations in neural dynamics and cognition, Dominik Krzeminski and Luke Tait
-1. Fitting models to neuroimaging data, Alex Shaw (to be run in the future, date TBC)
 
 This repository contains all slides and practical files for the workshop to date. Video recordings of the seminars can be found at [Luke Tait's Youtube Channel](https://www.youtube.com/channel/UC0lXn8cYF0RKceP8B9lcZtg). 
